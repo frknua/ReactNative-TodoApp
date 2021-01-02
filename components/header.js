@@ -12,13 +12,13 @@ export default function Header(){
 const styles = StyleSheet.create({
     header:{
         height:80,
-        paddingTop:38,
+        paddingTop:10,
         backgroundColor:'coral'
     },
     title:{
         textAlign:'center',
         color:'#fff',
-        fontSize:20,
-        fontWeight:'bold'
+        fontSize:40,
+        fontFamily:'Redressed-Regular'
     }
 });
