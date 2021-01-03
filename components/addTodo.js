@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {StyleSheet,View, TextInput, Button } from 'react-native';
+import {View, TextInput, Button } from 'react-native';
+import {globalStyles} from '../styles/global';
 export default function AddTodo({submitHandler}){
     
     const [text,setText] = useState('');
@@ -11,7 +12,7 @@ export default function AddTodo({submitHandler}){
     return(
         <View>
             <TextInput 
-                style = {styles.input}
+                style = {globalStyles.input}
                 placeholder='new todo...'
                 onChangeText={changeHandler}
             />
@@ -21,13 +22,3 @@ export default function AddTodo({submitHandler}){
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    input:{
-        marginBottom:10,
-        paddingHorizontal:8,
-        paddingVertical:6,
-        borderBottomWidth:1,
-        borderRightColor:'#ddd'
-    }
-})

@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {StyleSheet,View,FlatList, Alert, TouchableWithoutFeedback, Keyboard,LogBox } from 'react-native';
+import {StyleSheet, View, FlatList, Alert, TouchableWithoutFeedback, Keyboard, LogBox } from 'react-native';
 import Header from './components/header';
 import TodoItem from './components/todoItem';
 import AddTodo from './components/addTodo';
+import {globalStyles} from './styles/global';
 
 export default function App(){
 
@@ -47,11 +48,11 @@ export default function App(){
       Keyboard.dismiss();
       console.log("dismissed keyboard!");
     }}>
-    <View style={styles.container}>
+    <View style={globalStyles.container}>
       <Header />
-      <View style={styles.content}>
+      <View style={globalStyles.content}>
         <AddTodo submitHandler = {submitHandler} />
-        <View style={styles.list}>
+        <View style={globalStyles.list}>
           <FlatList
             data ={todos}
             keyExtractor={item => item.key.toString()}
@@ -66,18 +67,5 @@ export default function App(){
   );
 }
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:'#f2f2f2',
-  },
-  content:{
-    padding:40,
-    flex:1
-  },
-  list:{
-    flex:1,
-    marginTop:20
-  }
-});
+
 

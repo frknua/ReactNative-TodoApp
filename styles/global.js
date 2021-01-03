@@ -1,0 +1,47 @@
+import {StyleSheet} from 'react-native';
+
+export const globalStyles = StyleSheet.create({
+    container:{
+      flex:1,
+      backgroundColor:'#f2f2f2',
+    },
+    content:{
+      padding:40,
+      flex:1
+    },
+    list:{
+      flex:1,
+      marginTop:20
+    },
+    input:{
+        marginBottom:10,
+        paddingHorizontal:8,
+        paddingVertical:6,
+        borderBottomWidth:1,
+        borderRightColor:'#ddd'
+    },
+    header:{
+        height:80,
+        paddingTop:10,
+        backgroundColor:'coral'
+    },
+    title:{
+        textAlign:'center',
+        color:'#fff',
+        fontSize:40,
+        fontFamily:'Redressed-Regular'
+    },
+    item:{
+        padding:16,
+        marginTop:16,
+        borderColor:'#bbb',
+        borderWidth:1,
+        borderStyle:'dashed',
+        borderRadius:10,
+        color:'#000',
+        flexDirection:'row'
+    },
+    itemText:{
+        marginLeft:10
+    }
+  });
